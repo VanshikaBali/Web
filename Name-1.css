@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.smoke {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: smokeAnimation 4s infinite;
+}
+
+@keyframes smokeAnimation {
+  0% {
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-300px) scale(2);
+    opacity: 0;
+  }
+}

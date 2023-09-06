@@ -1,0 +1,16 @@
+.animated-text {
+    position: relative;
+    animation: smoke-animation 5s infinite;
+  }
+  
+  @keyframes smoke-animation {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

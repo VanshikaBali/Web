@@ -1,0 +1,34 @@
+/* panda-animation.css */
+
+.body {
+    background-color: green;
+}
+
+.road {
+    border-bottom: 7px dashed black;
+}
+
+.panda {
+    background: url(panda.png);
+    width: 70px;
+    height: 100px;
+    animation: walk 1s steps(12) infinite, forward 5s linear infinite;
+}
+
+@keyframes walk {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 880px;
+    }
+}
+
+@keyframes forward {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(1200px);
+    }
+}

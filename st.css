@@ -1,0 +1,96 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #9ad751, #2196f3);
+}
+
+/* Circular menu styling */
+.menu {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%; /* Position vertically at the center */
+    left: 50%; /* Position horizontally at the center */
+    transform: translate(-50%, -50%); /* Center the menu */
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Your existing CSS code here */
+
+.menu ul {
+    list-style: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu.active ul {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu ul li {
+    position: relative;
+    margin: 10px;
+    transform-origin: 140px;
+    scale: 0;
+    transition: 0.5s;
+}
+
+.menu.active ul li {
+    scale: 1;
+}
+
+.menu ul li a {
+    position: relative;
+    display: flex;
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.75em;
+}
+
+.menu ul li a.icon-facebook::before {
+    content: "\f09a"; /* Unicode for Facebook icon */
+}
+
+.menu ul li a.icon-whatsapp::before {
+    content: "\f232"; /* Unicode for WhatsApp icon */
+}
+
+/* Repeat the above for other icons */
+
+/* Rest of your existing CSS code here */
